@@ -1,0 +1,56 @@
+@use './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  background: variables.$light-prime-bg-color;
+  background: linear-gradient(
+    40deg,
+    variables.$light-prime-bg-color 0%,
+    variables.$sec-bg-color 100%
+  );
+  color: variables.$prime-color;
+}
+
+body.day {
+  background: variables.$light-prime-bg-color;
+  background: linear-gradient(
+    40deg,
+    variables.$light-prime-bg-color 0%,
+    variables.$sec-bg-color 100%
+  );
+}
+
+body.night {
+  background: variables.$dark-prime-bg-color;
+  background: linear-gradient(
+    40deg,
+    variables.$dark-prime-bg-color 60%,
+    variables.$sec-bg-color 100%
+  );
+  color: variables.$prime-color;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+  height: 900px;
+  border-radius: 30px;
+  border: 2px solid variables.$prime-color;
+}

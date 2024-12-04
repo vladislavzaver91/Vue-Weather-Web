@@ -1,0 +1,22 @@
+@use './variables.scss';
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  color: variables.$prime-color;
+
+  &:hover {
+    color: variables.$prime-grey-color;
+  }
+}
+
+.swiper-button-prev {
+  left: -50px;
+}
+
+.swiper-button-next {
+  right: -50px;
+}

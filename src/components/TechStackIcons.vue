@@ -14,9 +14,12 @@ export default {
 
 <template>
   <div class="tech-stack">
-    <div
+    <a
       v-for="icon in icons"
       :key="icon.name"
+      :href="icon.href"
+      target="_blank"
+      rel="noopener noreferrer"
       class="icon-container"
       @mouseenter="hoveredIcon = icon.name"
       @mouseleave="hoveredIcon = null"
@@ -30,7 +33,7 @@ export default {
       <div v-if="hoveredIcon === icon.name" class="icon-label">
         {{ icon.name }}
       </div>
-    </div>
+    </a>
   </div>
 </template>
 
